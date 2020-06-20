@@ -6,5 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/mnt/d/Documents/code/agile_devlopment_practices/c_practices/Domain_language/main.c
+/mnt/d/Documents/code/agile_devlopment_practices/c_practices/Domain_language/a_recentage_interpreter.c
+a_recentage_interpreter.h
+/mnt/d/Documents/code/agile_devlopment_practices/c_practices/Domain_language/a_recentage_interpreter.h
+stdio.h
+-
+string.h
+-
+
+/mnt/d/Documents/code/agile_devlopment_practices/c_practices/Domain_language/a_recentage_interpreter.h
 

@@ -123,6 +123,33 @@ c_practices/fast:
 	$(MAKE) -f CMakeFiles/c_practices.dir/build.make CMakeFiles/c_practices.dir/build
 .PHONY : c_practices/fast
 
+Domain_language/a_recentage_interpreter.o: Domain_language/a_recentage_interpreter.c.o
+
+.PHONY : Domain_language/a_recentage_interpreter.o
+
+# target to build an object file
+Domain_language/a_recentage_interpreter.c.o:
+	$(MAKE) -f CMakeFiles/c_practices.dir/build.make CMakeFiles/c_practices.dir/Domain_language/a_recentage_interpreter.c.o
+.PHONY : Domain_language/a_recentage_interpreter.c.o
+
+Domain_language/a_recentage_interpreter.i: Domain_language/a_recentage_interpreter.c.i
+
+.PHONY : Domain_language/a_recentage_interpreter.i
+
+# target to preprocess a source file
+Domain_language/a_recentage_interpreter.c.i:
+	$(MAKE) -f CMakeFiles/c_practices.dir/build.make CMakeFiles/c_practices.dir/Domain_language/a_recentage_interpreter.c.i
+.PHONY : Domain_language/a_recentage_interpreter.c.i
+
+Domain_language/a_recentage_interpreter.s: Domain_language/a_recentage_interpreter.c.s
+
+.PHONY : Domain_language/a_recentage_interpreter.s
+
+# target to generate assembly for a file
+Domain_language/a_recentage_interpreter.c.s:
+	$(MAKE) -f CMakeFiles/c_practices.dir/build.make CMakeFiles/c_practices.dir/Domain_language/a_recentage_interpreter.c.s
+.PHONY : Domain_language/a_recentage_interpreter.c.s
+
 Domain_language/main.o: Domain_language/main.c.o
 
 .PHONY : Domain_language/main.o
@@ -159,6 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... c_practices"
 	@echo "... edit_cache"
+	@echo "... Domain_language/a_recentage_interpreter.o"
+	@echo "... Domain_language/a_recentage_interpreter.i"
+	@echo "... Domain_language/a_recentage_interpreter.s"
 	@echo "... Domain_language/main.o"
 	@echo "... Domain_language/main.i"
 	@echo "... Domain_language/main.s"

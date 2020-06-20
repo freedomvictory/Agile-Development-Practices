@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/mnt/d/Documents/code/agile_devlopment_practices/c_practices/Domain_language/a_recentage_interpreter.c" "/mnt/d/Documents/code/agile_devlopment_practices/c_practices/cmake-build-debug/CMakeFiles/c_practices.dir/Domain_language/a_recentage_interpreter.c.o"
   "/mnt/d/Documents/code/agile_devlopment_practices/c_practices/Domain_language/main.c" "/mnt/d/Documents/code/agile_devlopment_practices/c_practices/cmake-build-debug/CMakeFiles/c_practices.dir/Domain_language/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

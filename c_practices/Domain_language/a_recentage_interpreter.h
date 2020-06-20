@@ -12,8 +12,8 @@
 
 typedef struct {
     char m_cmd_type;
-    int m_arg;          //if no arg , arg = -1
-    void *handler;
+    int m_arg;          //if no arg , arg = 0, if not,  arg = 1
+    void (*func)(char, char);
 }InputCmd;
 
 enum IsHasArg{
@@ -21,13 +21,24 @@ enum IsHasArg{
     NO_ARG
 };
 
-void do_select_pen(int pen_id);
-void do_pen_down(void);
-void do_pen_up(void);
-void do_pen_dir(char dir, int distance);
+void do_select_pen(char type, char pen_id);
+void do_pen_down(char type, char no_arg);
+void do_pen_up(char type ,char no_arg);
+void do_pen_dir(char type, char distance);
 
-InputCmd find_command(char type);
+/*return: If fail, return -1, If success return array index
+ * arguments: type -> command type, arg -> command arguments (if arg = 0, it represent ,No arg)
+ * */
+int find_command(char type, char arg);
+
+
+int judge_cmd_type_illegal(char type);
+int judge_cmd_arg_illegal(char arg);
+int judge_cmd_effective(int argc, char *argv[]);
+
+
 int interpreter(int argc, char* argv[]);
+
 
 
 
