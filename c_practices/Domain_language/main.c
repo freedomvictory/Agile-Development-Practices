@@ -8,6 +8,10 @@
 #include <string.h>
 
 
+/*
+ * reference book page : The Pragmatic Programmer -->  p226 exercise 5
+ * */
+
 int main(int argc, char* argv[])
 {
     if(argc == 0)
