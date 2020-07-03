@@ -1,7 +1,8 @@
 
 /*created by gavin 2020/06/19
  * a simple interpreter that using explaining one language which can draw rectangle
- /*
+ */
+/*
   P 2 #select pen 2
   D # pen down
   W 2 # draw west 2cm
@@ -9,7 +10,7 @@
   E 2
   S 1
   U
-  */
+*/
 
 
 #include "a_recentage_interpreter.h"
@@ -40,7 +41,7 @@ int find_command(char type, char arg)
 {
     int i = 0;
 
-    for( i; i < Cmd_list_len; i++)
+    for( i = 0; i < Cmd_list_len; i++)
     {
         if(type == cmd_list[i].m_cmd_type)
         {

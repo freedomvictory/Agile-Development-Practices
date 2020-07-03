@@ -1,3 +1,0 @@
-/mnt/d/Documents/code/agile_devlopment_practices/c_practices/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/mnt/d/Documents/code/agile_devlopment_practices/c_practices/cmake-build-debug/CMakeFiles/c_practices.dir
-/mnt/d/Documents/code/agile_devlopment_practices/c_practices/cmake-build-debug/CMakeFiles/edit_cache.dir
