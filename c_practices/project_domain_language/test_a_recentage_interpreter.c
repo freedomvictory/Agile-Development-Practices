@@ -16,6 +16,7 @@ START_TEST(test_find_command_normal)
     ck_assert_int_eq(find_command('W', '4'), 5);
     ck_assert_int_eq(find_command('S', '4'), 6);
 }
+END_TEST
 
 START_TEST(test_find_command_abnormal)
 {
@@ -31,8 +32,31 @@ START_TEST(test_find_command_abnormal)
     ck_assert_int_eq(find_command('U', '2'), -1);
 
 }
+END_TEST
+
+START_TEST(test_interpreter_normal)
+{
+    char *argv_P[] = {"./a.out", "P", "2"};
+    ck_assert_int_eq(interpreter(3, argv_P), 0);
+
+    char *argv_D[] = {"./a.out", "D"};
+    ck_assert_int_eq(interpreter(2, argv_D), 0);
+            
 
 
+}
+END_TEST
+
+START_TEST(test_interpreter_abnormal)
+{
+    char *argv_p_ab[] = {"./a.out", "PW", "2"};
+    ck_assert_int_eq(interpreter(3, argv_p_ab), -1);
+
+
+    char *argv_d_ab[] = {"./a.out", "D", "2", "33", "44"};
+    ck_assert_int_eq(interpreter(3, argv_d_ab), -1);
+
+}
 END_TEST
 
 Suite *domain_suite(void)
@@ -45,6 +69,8 @@ Suite *domain_suite(void)
 
     tcase_add_test(tc_core, test_find_command_normal);
     tcase_add_test(tc_core, test_find_command_abnormal);
+    tcase_add_test(tc_core, test_interpreter_normal);
+    tcase_add_test(tc_core, test_interpreter_abnormal);
 
     suite_add_tcase(s, tc_core);
         
