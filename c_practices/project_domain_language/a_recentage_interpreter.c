@@ -45,7 +45,7 @@ int find_command(char type, char arg)
     {
         if(type == cmd_list[i].m_cmd_type)
         {
-            if((arg == 0 && cmd_list[i].m_arg == NO_ARG) || (arg = 1 && cmd_list[i].m_arg == ARG))
+            if((arg == 0 && cmd_list[i].m_arg == NO_ARG) || (arg && cmd_list[i].m_arg == ARG))
                 return i;
             else
                 goto ERROR;

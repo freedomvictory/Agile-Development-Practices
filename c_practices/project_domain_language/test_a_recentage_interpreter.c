@@ -6,10 +6,33 @@
 
 
 
-START_TEST(test_find_command)
+START_TEST(test_find_command_normal)
 {
-    ck_assert_int_eq(find_command('S', '2'), 5);
+    ck_assert_int_eq(find_command('P', '2'), 0);
+    ck_assert_int_eq(find_command('U', 0), 1);
+    ck_assert_int_eq(find_command('D', 0), 2);
+    ck_assert_int_eq(find_command('N', '2'), 3);
+    ck_assert_int_eq(find_command('E', '3'), 4);
+    ck_assert_int_eq(find_command('W', '4'), 5);
+    ck_assert_int_eq(find_command('S', '4'), 6);
 }
+
+START_TEST(test_find_command_abnormal)
+{
+    /*first situation 
+     * type is not right*/
+
+    ck_assert_int_eq(find_command('A', '2'), -1);
+    ck_assert_int_eq(find_command('B', 0), -1);
+
+    /*second situation
+     * type is right, but arg is wrong!*/
+    ck_assert_int_eq(find_command('P', 0), -1);
+    ck_assert_int_eq(find_command('U', '2'), -1);
+
+}
+
+
 END_TEST
 
 Suite *domain_suite(void)
@@ -20,7 +43,9 @@ Suite *domain_suite(void)
     s = suite_create("Domain");
     tc_core = tcase_create("Core");
 
-    tcase_add_test(tc_core, test_find_command);
+    tcase_add_test(tc_core, test_find_command_normal);
+    tcase_add_test(tc_core, test_find_command_abnormal);
+
     suite_add_tcase(s, tc_core);
         
     return s;
