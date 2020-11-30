@@ -1,4 +1,4 @@
-# PLANT UML 使用 
+# PLANT UML timing diagram 
 
 
 ## 时序图 
@@ -241,13 +241,6 @@ deactivate A
 
 
 
-
-
-## 对象 
-
-
-
-## 用例 
 
 
 
